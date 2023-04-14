@@ -6,11 +6,11 @@ namespace HearthstoneAPIClient.Interfaces
     public interface IService
     {
         #region Properties
-        public CallManager Manager { get; set; }
+        public CallManager Manager { get; }
 
-        public JObject ResponseContent { get; set; }
+        public JArray ResponseContent { get; }
 
-        public IResponse ResponseObject { get; set; }
+        public IResponse ResponseObject { get; }
         #endregion
 
         public Task MakeRequestAsync(string requestString);

@@ -20,23 +20,23 @@ namespace HearthstoneAPITests.BDD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("CardRaceFeature")]
-    public partial class CardRaceFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("CardClassFeature")]
+    public partial class CardClassFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "CardRaceFeature.feature"
+#line 1 "CardClassFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "CardRaceFeature", "AS a Player\r\nI WANT to be able to search cards by Race \r\nSO THAT I can see which " +
-                    "Cards are affected my Abilities", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD", "CardClassFeature", "AS a player\r\nI WANT to be able to search cards by Class\r\nSO THAT I can see which " +
+                    "cards I could play", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -84,18 +84,18 @@ namespace HearthstoneAPITests.BDD
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type status code 200 should be in the response he" +
-            "ader")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid class type status code 200 should be in the response h" +
+            "eader")]
+        [NUnit.Framework.CategoryAttribute("CardClassRequest")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void WhenSearchingForAValidRaceTypeStatusCode200ShouldBeInTheResponseHeader()
+        public void WhenSearchingForAValidClassTypeStatusCode200ShouldBeInTheResponseHeader()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest",
+                    "CardClassRequest",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type status code 200 should be in the response he" +
-                    "ader", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid class type status code 200 should be in the response h" +
+                    "eader", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -109,19 +109,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "races"});
-                table4.AddRow(new string[] {
-                            "Murloc"});
-                table4.AddRow(new string[] {
-                            "Demon"});
-                table4.AddRow(new string[] {
-                            "Dragon"});
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "key",
+                            "Classes"});
+                table1.AddRow(new string[] {
+                            "1",
+                            "Rogue"});
+                table1.AddRow(new string[] {
+                            "2",
+                            "Shaman"});
+                table1.AddRow(new string[] {
+                            "3",
+                            "Warlock"});
 #line 13
- testRunner.When("I search for the races", ((string)(null)), table4, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table1, "When ");
 #line hidden
 #line 18
- testRunner.Then("A JSON of just races cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 19
  testRunner.And("Header status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -131,16 +135,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type status returned object should be a json")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid class type status returned object should be a json")]
+        [NUnit.Framework.CategoryAttribute("CardClassRequest")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void WhenSearchingForAValidRaceTypeStatusReturnedObjectShouldBeAJson()
+        public void WhenSearchingForAValidClassTypeStatusReturnedObjectShouldBeAJson()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest",
+                    "CardClassRequest",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type status returned object should be a json", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid class type status returned object should be a json", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -154,19 +158,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "races"});
-                table5.AddRow(new string[] {
-                            "Murloc"});
-                table5.AddRow(new string[] {
-                            "Demon"});
-                table5.AddRow(new string[] {
-                            "Dragon"});
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Classes"});
+                table2.AddRow(new string[] {
+                            "Rogue"});
+                table2.AddRow(new string[] {
+                            "Shaman"});
+                table2.AddRow(new string[] {
+                            "Warlock"});
 #line 24
- testRunner.When("I search for the races", ((string)(null)), table5, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table2, "When ");
 #line hidden
 #line 29
- testRunner.Then("A JSON of just races cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 30
  testRunner.And("Content type should be \"application/json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -176,16 +180,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type connection should be keep alive")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid class type connection should be keep alive")]
+        [NUnit.Framework.CategoryAttribute("CardClassRequest")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void WhenSearchingForAValidRaceTypeConnectionShouldBeKeepAlive()
+        public void WhenSearchingForAValidClassTypeConnectionShouldBeKeepAlive()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest",
+                    "CardClassRequest",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type connection should be keep alive", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid class type connection should be keep alive", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -199,19 +203,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "races"});
-                table6.AddRow(new string[] {
-                            "Murloc"});
-                table6.AddRow(new string[] {
-                            "Demon"});
-                table6.AddRow(new string[] {
-                            "Dragon"});
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Classes"});
+                table3.AddRow(new string[] {
+                            "Rogue"});
+                table3.AddRow(new string[] {
+                            "Shaman"});
+                table3.AddRow(new string[] {
+                            "Warlock"});
 #line 36
- testRunner.When("I search for the races", ((string)(null)), table6, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table3, "When ");
 #line hidden
 #line 41
- testRunner.Then("A JSON of just races cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 42
  testRunner.And("Connection type should be \"keep-alive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -221,18 +225,18 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a invalid race type status code 404 should be in the response " +
-            "header")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a invalid class type status code 404 should be in the response" +
+            " header")]
+        [NUnit.Framework.CategoryAttribute("CardClassRequest")]
         [NUnit.Framework.CategoryAttribute("Sad")]
-        public void WhenSearchingForAInvalidRaceTypeStatusCode404ShouldBeInTheResponseHeader()
+        public void WhenSearchingForAInvalidClassTypeStatusCode404ShouldBeInTheResponseHeader()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest",
+                    "CardClassRequest",
                     "Sad"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid race type status code 404 should be in the response " +
-                    "header", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid class type status code 404 should be in the response" +
+                    " header", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -247,7 +251,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 47
- testRunner.When("I search for the race \"Daemon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I search for the class \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 48
  testRunner.Then("Header status should be 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -257,16 +261,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a invalid race type an error message should show")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a invalid class type an error message should show")]
+        [NUnit.Framework.CategoryAttribute("CardClassRequest")]
         [NUnit.Framework.CategoryAttribute("Sad")]
-        public void WhenSearchingForAInvalidRaceTypeAnErrorMessageShouldShow()
+        public void WhenSearchingForAInvalidClassTypeAnErrorMessageShouldShow()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest",
+                    "CardClassRequest",
                     "Sad"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid race type an error message should show", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid class type an error message should show", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -281,10 +285,10 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 54
- testRunner.When("I search for the race \"Daemon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I search for the class \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 55
- testRunner.Then("JSON should contain a message \"Endpoint \'/races/Daemon\' does not exist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("JSON should contain a message \"Class not found.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

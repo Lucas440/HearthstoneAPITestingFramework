@@ -28,7 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BDD\" />
+    <None Update="TestHost.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

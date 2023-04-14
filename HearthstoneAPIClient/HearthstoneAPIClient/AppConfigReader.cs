@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace HearthstoneAPITests
+namespace HearthstoneAPIClient
 {
     public static class AppConfigReader
     {

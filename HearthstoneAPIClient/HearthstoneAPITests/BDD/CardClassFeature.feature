@@ -10,18 +10,18 @@ Background:
 @CardClassRequest
 @Happy
 Scenario: When searching for a valid class type status code 200 should be in the response header
-	When I search for the Classes
-	| Classes |
-	| Rogue   |
-	| Shaman  |
-	| Warlock |
+	When I search for the Classes <Classes>
+	| key | Classes |
+	| 1 | Rogue   |
+	| 2 | Shaman  |
+	| 3 | Warlock |
 	Then A JSON of just Classes cards is returned
 	And Header status should be 200
 
 @CardClassRequest
 @Happy
 Scenario: When searching for a valid class type status returned object should be a json
-	When I search for the Classes
+	When I search for the Classes <Classes>
 	| Classes |
 	| Rogue   |
 	| Shaman  |
@@ -33,7 +33,7 @@ Scenario: When searching for a valid class type status returned object should be
 @CardClassRequest
 @Happy
 Scenario: When searching for a valid class type connection should be keep alive
-	When I search for the Classes
+	When I search for the Classes <Classes>
 	| Classes |
 	| Rogue   |
 	| Shaman  |
