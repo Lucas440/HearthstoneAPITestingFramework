@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Services\DataHandling\HTTPClient\" />
-    <Folder Include="Services\DataHandling\Models\" />
   </ItemGroup>
 
   <ItemGroup>

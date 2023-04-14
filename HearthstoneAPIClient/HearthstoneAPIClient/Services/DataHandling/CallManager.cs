@@ -17,20 +17,20 @@ namespace HearthstoneAPIClient.Services.DataHandling
             _client = client;
         }
 
-        public async Task MakeRequestAsync(string requestString) 
+        public async Task MakeRequestAsync(string requestString)
         {
-            using (_client) 
-            {
-                HttpRequestMessage request = new HttpRequestMessage();
 
-                request.RequestUri = new Uri(AppConfigReader.BaseUrl + requestString);
+            HttpRequestMessage request = new HttpRequestMessage();
 
-                request.Headers.Add("X-RapidAPI-Key", AppConfigReader.ApiKey);
-                request.Headers.Add("X-RapidAPI-Host", AppConfigReader.ApiHost);
-                request.Headers.Add("Cookie", AppConfigReader.ApiCookie);
+            request.RequestUri = new Uri(AppConfigReader.BaseUrl + requestString);
 
-                ResponseMessage = await _client.SendAsync(request);
-            }
+            request.Headers.Add("X-RapidAPI-Key", AppConfigReader.ApiKey);
+            request.Headers.Add("X-RapidAPI-Host", AppConfigReader.ApiHost);
+            request.Headers.Add("Cookie", AppConfigReader.ApiCookie);
+
+            request.Headers.Add("Accept", "application/json");
+
+            ResponseMessage = _client.SendAsync(request).Result;
         }
     }
 }

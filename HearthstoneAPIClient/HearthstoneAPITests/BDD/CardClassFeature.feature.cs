@@ -110,15 +110,19 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "key",
                             "Classes"});
                 table1.AddRow(new string[] {
+                            "1",
                             "Rogue"});
                 table1.AddRow(new string[] {
+                            "2",
                             "Shaman"});
                 table1.AddRow(new string[] {
+                            "3",
                             "Warlock"});
 #line 13
- testRunner.When("I search for the Classes", ((string)(null)), table1, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table1, "When ");
 #line hidden
 #line 18
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -163,7 +167,7 @@ this.FeatureBackground();
                 table2.AddRow(new string[] {
                             "Warlock"});
 #line 24
- testRunner.When("I search for the Classes", ((string)(null)), table2, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table2, "When ");
 #line hidden
 #line 29
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -208,7 +212,7 @@ this.FeatureBackground();
                 table3.AddRow(new string[] {
                             "Warlock"});
 #line 36
- testRunner.When("I search for the Classes", ((string)(null)), table3, "When ");
+ testRunner.When("I search for the Classes <Classes>", ((string)(null)), table3, "When ");
 #line hidden
 #line 41
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

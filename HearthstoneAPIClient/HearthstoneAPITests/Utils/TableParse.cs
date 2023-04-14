@@ -8,6 +8,7 @@ namespace HearthstoneAPITests.Utils
 {
     public class TableParse
     {
+        public int key { get; set; }
         public string Classes { get; set; }
     }
 }

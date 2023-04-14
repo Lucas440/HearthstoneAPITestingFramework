@@ -11,46 +11,47 @@ namespace HearthstoneAPITests.BDD
     [Binding]
     public class CardClassFeatureStepDefinitions
     {
-        private IService _service;
+        private static IService _service;
 
-        private TableParse _parse;
+        private static TableParse _parse;
 
+        
         [Given(@"I have initialized CardRaceService")]
         public void GivenIHaveInitializedCardRaceService()
         {
             CallManager manager = new CallManager(new HttpClient());
-            IService _service = new CardRaceService(manager);
+            _service = new CardClassService(manager);
         }
 
-        [When(@"I search for the Classes")]
-        public void WhenISearchForTheClasses(Table table)
+        [When(@"I search for the Classes <Classes>")]
+        public void WhenISearchForTheClassesClasses(Table table)
         {
-            _parse = table.CreateInstance<TableParse>();
-            _service.MakeRequestAsync(_parse.Classes);
+            //_parse = table.CreateInstance<TableParse>();
         }
+
 
         [Then(@"A JSON of just Classes cards is returned")]
-        public void ThenAJSONOfJustClassesCardsIsReturned()
+        public async void ThenAJSONOfJustClassesCardsIsReturned()
         {
-            throw new PendingStepException();
+            await _service.MakeRequestAsync("cards/classes/Rogue");
         }
 
         [Then(@"Header status should be (.*)")]
         public void ThenHeaderStatusShouldBe(int p0)
         {
-            throw new PendingStepException();
+            Assert.That(((CardClassService)_service).GetStatusCode(), Is.EqualTo(p0));
         }
 
         [Then(@"Content type should be ""([^""]*)""")]
         public void ThenContentTypeShouldBe(string p0)
         {
-            throw new PendingStepException();
+            Assert.That(((CardClassService)_service).GetContentType(), Is.EqualTo(p0));
         }
 
         [Then(@"Connection type should be ""([^""]*)""")]
         public void ThenConnectionTypeShouldBe(string p0)
         {
-            throw new PendingStepException();
+            Assert.That(((CardClassService)_service).GetConnectionType(), Is.EqualTo(p0));
         }
 
         [When(@"I search for the class ""([^""]*)""")]

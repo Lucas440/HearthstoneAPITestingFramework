@@ -27,4 +27,10 @@
     <ProjectReference Include="..\HearthstoneAPIClient\HearthstoneAPIClient.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestHost.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
