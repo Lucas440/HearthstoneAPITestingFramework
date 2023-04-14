@@ -27,8 +27,4 @@
     <ProjectReference Include="..\HearthstoneAPIClient\HearthstoneAPIClient.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BDD\" />
-  </ItemGroup>
-
 </Project>
