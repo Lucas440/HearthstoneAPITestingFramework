@@ -2,6 +2,7 @@
 
 ====================================================
 API Testing Project on [Hearthstone® API for Developers | RapidAP]((https://rapidapi.com/omgvamp/api/hearthstone)) that utilises HTTPS and Specflow.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 🥅 Testing Aims
@@ -28,10 +29,8 @@ Our up-to-date GitHub project board [can be found here](https://github.com/user
 
 ### 💭 Definitions of Done and Ready
 
-Our definitions of Done and Ready [can be found here]()
+
 
 ### 🤺 Contributors
 
 Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
-
-
