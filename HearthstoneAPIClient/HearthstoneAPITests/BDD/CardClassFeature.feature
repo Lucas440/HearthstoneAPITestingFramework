@@ -8,6 +8,7 @@ Background:
 	Given I have initialized CardRaceService
 
 @CardClassRequest
+@Happy
 Scenario: When searching for a valid class type status code 200 should be in the response header
 	When I search for the Classes
 	| Classes |
@@ -17,7 +18,8 @@ Scenario: When searching for a valid class type status code 200 should be in the
 	Then A JSON of just Classes cards is returned
 	And Header status should be 200
 
-@CardRaceRequest
+@CardClassRequest
+@Happy
 Scenario: When searching for a valid class type status returned object should be a json
 	When I search for the Classes
 	| Classes |
@@ -28,7 +30,8 @@ Scenario: When searching for a valid class type status returned object should be
 	And Content type should be "application/json"
 
 
-@CardRaceRequest
+@CardClassRequest
+@Happy
 Scenario: When searching for a valid class type connection should be keep alive
 	When I search for the Classes
 	| Classes |
@@ -37,3 +40,16 @@ Scenario: When searching for a valid class type connection should be keep alive
 	| Warlock |
 	Then A JSON of just Classes cards is returned
 	And Connection type should be "keep-alive"
+
+@CardClassRequest
+@Sad
+Scenario: When searching for a invalid class type status code 404 should be in the response header
+	When I search for the class "Shamon"
+	Then Header status should be 404
+	 
+
+@CardClassRequest
+@Sad
+Scenario: When searching for a invalid class type an error message should show
+	When I search for the class "Shamon"
+	Then JSON should contain a message "Class not found." 
