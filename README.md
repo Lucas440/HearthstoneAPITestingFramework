@@ -88,7 +88,9 @@ Returns all the cards of a class. Example values: Mage, Paladin.
 
 Our up-to-date GitHub project board [can be found here](https://github.com/users/gleniw/projects/1)
 
-### Metro Retro Board [can be found here](https://metroretro.io/board/LBZC3YCTJGLN)
+### Retrospective
+
+Our Metro Retro Board [can be found here](https://metroretro.io/board/LBZC3YCTJGLN)
 
 ### 💭 Definitions of Done and Ready
 
