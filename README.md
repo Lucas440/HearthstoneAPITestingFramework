@@ -86,6 +86,18 @@ Returns all the cards of a certain race. Example values: Mech, Murloc.
 **Description**
 Returns all the cards of a class. Example values: Mage, Paladin.
 
+#### Living Docs
+
+###### How to upgrade / create new LivingDoc File
+
+1. Confirm CLI is installed by entering the following command in CMD: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
+2. Navigate to folder containing the tests in CMD(\HearthstoneAPITestingFramework\HearthstoneAPIClient\HearthstoneAPITests)
+
+3. Execute the following command: livingdoc feature-folder .\ -t.\bin\debug\net7.0\TestExecution.json --output .\MyReport.html
+
+4. Access the livingdoc file in the tests folder (Step 2.)
+
 ### 📝 Project Board
 
 Our up-to-date GitHub project board [can be found here](https://github.com/users/gleniw/projects/1)
