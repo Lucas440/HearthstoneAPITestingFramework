@@ -2,6 +2,8 @@
 
 ## API Testing Project on [Hearthstone® API for Developers | RapidAP]((https://rapidapi.com/omgvamp/api/hearthstone)) that utilises HTTPS and Specflow
 
+[![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
+
 ### Product Goal
 
 * [ ]  Have an automated Test Framework for the Hearthstone API  
