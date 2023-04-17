@@ -10,7 +10,7 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
 
-### How To use
+### How to use
 
 When loading the program each item is organized in its respected file
 
