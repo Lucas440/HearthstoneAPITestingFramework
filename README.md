@@ -36,7 +36,7 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 ### Class Diagram
 
-![Class Diagram]("C:\Users\Glen Smith\source\repos\HearthstoneAPITestingFramework\HearthstoneAPIClient\ClassDiagram1.png")
+![Class Diagram]()
 
 ### Tools
 - HTTPS 
