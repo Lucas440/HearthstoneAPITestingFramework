@@ -4,7 +4,7 @@ name: SpecFlow Tests
 
 on:
   push:
-    branches: [ "gleniw-patch-1" ]
+    branches: [ "dev" ]
 
 defaults:
   run:
