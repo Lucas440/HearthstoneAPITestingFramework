@@ -21,6 +21,31 @@ Epic 1.0 - Epic 2.0 - Epic 3.0 - Epic 4.0
 
 ### 🏷 Class Diagrams and Test Framework
 
+Services
+
+IService
+IHelper
+
+Single Responsibility
+Interface Seperation
+
+Helper methods
+
+Call to manager, if sucessful into JArray and unsucessful JObject
+
+Features
+
+Step Definitions
+
+Init the service
+
+Assert That return information is correct
+
+Checking the repsponse
+
+Dependancy Injection
+
+Call Manager is not called on the page
 
 
 ### 📝 Project Board
