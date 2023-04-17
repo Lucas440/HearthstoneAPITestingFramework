@@ -1,65 +1,59 @@
 using HearthstoneAPIClient.Interfaces;
-using HearthstoneAPIClient.Services;
 using HearthstoneAPIClient.Services.DataHandling;
-using HearthstoneAPITests.Utils;
+using HearthstoneAPIClient.Services;
 using System;
 using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
 
 namespace HearthstoneAPITests.BDD
 {
     [Binding]
-    public class CardClassFeatureStepDefinitions
+    public class CardRaceFeatureStepDefinitions
     {
         private static IService _service;
 
         private static string _cardClass;
 
-        
-        [Given(@"I have initialized CardClassService")]
+        [Given(@"i have initialized CardRaceService")]
         public void GivenIHaveInitializedCardRaceService()
         {
             CallManager manager = new CallManager(new HttpClient());
-            _service = new CardClassService(manager);
+            _service = new CardRaceService(manager);
         }
 
-        [When(@"I search for the Classes ""([^""]*)""")]
-        public void WhenISearchForTheClassesClasses(string classType)
+        [When(@"I search for the race ""([^""]*)""")]
+        public void WhenISearchForTheRace(string p0)
         {
-            _cardClass = classType;
+            _cardClass = p0;
         }
 
-
-        [Then(@"A JSON of just Classes cards is returned")]
-        public async void ThenAJSONOfJustClassesCardsIsReturned()
+        [Then(@"A JSON of just races cards is returned")]
+        public async void ThenAJSONOfJustRacesCardsIsReturned()
         {
-            await _service.MakeRequestAsync($"cards/classes/{_cardClass}");
+            await _service.MakeRequestAsync($"cards/races/{_cardClass}");
         }
 
-        [Then(@"Header status should be (.*)")]
+        [Then(@"header status should be (.*)")]
         public void ThenHeaderStatusShouldBe(int p0)
         {
             Assert.That(((IHelper)_service).GetStatusCode(), Is.EqualTo(p0));
         }
 
-        [Then(@"Content type should be ""([^""]*)""")]
+        [Then(@"content type should be ""([^""]*)""")]
         public void ThenContentTypeShouldBe(string p0)
         {
             Assert.That(((IHelper)_service).GetContentType(), Is.EqualTo(p0));
         }
 
-        [Then(@"Connection type should be ""([^""]*)""")]
+        [Then(@"connection type should be ""([^""]*)""")]
         public void ThenConnectionTypeShouldBe(string p0)
         {
             Assert.That(((IHelper)_service).GetConnectionType(), Is.EqualTo(p0));
         }
 
-        [Then(@"JSON should contain a message ""([^""]*)""")]
-        public void ThenJSONShouldContainAMessage(string p0)
+        [Then(@"json should contain a message ""([^""]*)""")]
+        public void ThenJsonShouldContainAMessage(string p0)
         {
             Assert.That(_service.UnSuccessfulResponseContent["message"].ToString(), Is.EqualTo(p0));
         }
-
-
     }
 }

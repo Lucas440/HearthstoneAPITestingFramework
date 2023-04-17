@@ -12,6 +12,8 @@ namespace HearthstoneAPIClient.Services.DataHandling
 
         public HttpResponseMessage ResponseMessage { get; private set; }
 
+        public bool Successful { get; private set; }
+
         public CallManager(HttpClient client) 
         {
             _client = client;
@@ -31,6 +33,15 @@ namespace HearthstoneAPIClient.Services.DataHandling
             request.Headers.Add("Accept", "application/json");
 
             ResponseMessage = _client.SendAsync(request).Result;
+
+            if ((int)ResponseMessage.StatusCode != 404) 
+            {
+                Successful = true;
+            }
+            else
+            {
+                Successful = false;
+            }
         }
     }
 }
