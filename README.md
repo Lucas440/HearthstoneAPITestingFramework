@@ -4,8 +4,6 @@
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
 
-![Build](https://img.shields.io/appveyor/build/gleniw/HearthstoneAPITestingFramework)
-
 ### Product Goal
 
 * [ ]  Have an automated Test Framework for the Hearthstone API  
