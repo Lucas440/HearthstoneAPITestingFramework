@@ -16,12 +16,8 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 - IService
 - IHelper
-- Single Responsibility
-- Interface Seperation
 
 #### Call Manager
-
-- If sucessful into JArray and unsucessful JObject
 
 - Dependancy Injection
 
@@ -35,7 +31,22 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 ### Class Diagram
 
-![Class Diagram]()
+![Hearthstone drawio](https://user-images.githubusercontent.com/91668478/232553778-31ad4215-e54e-486b-bb48-cc33d327bf02.png)
+
+### How To Extend
+
+When loading the program each item is organized in its respected file
+
+#### Adding a Service
+  - Create a new Service class in the services folder
+  - Ensure the service implements the IHelper and IService interface
+  - Ensure the Service's constructor has a parameter of CallManager
+
+#### Adding new Tests
+- Create a new Specflow feature file to the BDD folder
+- Create gherkin scripts for the test cases 
+- Define the steps and Develop the steps from the scripts
+
 
 ### Tools
 - HTTPS 
@@ -112,17 +123,4 @@ Our definition of Done [can be found here](https://github.com/gleniw/Hearthstone
 
 Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/19)
 
-### How To Add
-
-When loading the program each item is organized in its respected file
-
-#### Adding a Service
-  - Create a new Service class in the services folder
-  - Ensure the service implements the IHelper and IService interface
-  - Ensure the Service's constructor has a parameter of CallManager
-
-#### Adding new Tests
-- Create a new Specflow feature file to the BDD folder
-- Create gherkin scripts for the test cases 
-- Define the steps and Develop the steps from the scripts
 
