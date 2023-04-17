@@ -90,7 +90,7 @@ Our up-to-date GitHub project board [can be found here](https://github.com/user
 
 ### Retrospective
 
-Our Metro Retro Board [can be found here](https://metroretro.io/board/LBZC3YCTJGLN)
+Our Metro Retro Board [can be found here](https://metroretro.io/board/LB05S0ZQXV3Z)
 
 ### 💭 Definitions of Done and Ready
 
