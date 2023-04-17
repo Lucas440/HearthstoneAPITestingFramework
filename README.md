@@ -1,8 +1,60 @@
 # Hearthstone API Testing Framework
 
-## API Testing Project on [Hearthstone® API for Developers | RapidAP]((https://rapidapi.com/omgvamp/api/hearthstone)) that utilises HTTPS and Specflow
+## API Testing Project on [Hearthstone® API for Developers | RapidAP]((https://rapidapi.com/omgvamp/api/hearthstone)) that utilises HTTPS and Specflow.
+
+### Current Test Status
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
+
+### Concepts Included
+
+#### Services
+
+IService
+IHelper
+
+Single Responsibility
+Interface Seperation
+
+#### Call Manager
+
+If sucessful into JArray and unsucessful JObject
+
+Dependancy Injection
+
+#### Features
+
+Step Definitions
+
+Initialise the service.
+
+Assert that return status, type are correct.
+
+Checking the response of requests are correct.
+
+### 🎉️ Epics
+
+#### Epic 1.0 View Card
+Endpoint
+/cards/{name}
+
+#### Epic 2.0 View Card Backs
+**Endpoint**
+/cardbacks
+**Description**
+Returns a list of all the card backs.
+
+#### Epic 3.0 View Race
+**Endpoint**
+/card/{race}
+**Description**
+Returns all the cards of a certain race. Example values: Mech, Murloc.
+
+#### Epic 4.0 View Classes
+**Endpoint**
+/cards/classes/{class}
+**Description**
+Returns all the cards of a class. Example values: Mage, Paladin.
 
 ### Product Goal
 
@@ -17,40 +69,7 @@
 * [ ]  GitHub Action Workflows
 
 
-### 🎉️ Epics
 
-Epic 1.0 View Card - Epic 2.0 View Card Backs - Epic 3.0 View Race - Epic 4. View Classes
-
-### 🏷 Class Diagrams and Test Framework
-
-#### Services
-
-IService
-IHelper
-
-Single Responsibility
-Interface Seperation
-
-Helper methods
-
-#### Call Manager
-
-If sucessful into JArray and unsucessful JObject
-
-Dependancy Injection
-
-Call Manager is not called on the page
-
-
-#### Features
-
-Step Definitions
-
-Initialise the service
-
-Assert that return information is correct
-
-Checking the repsponse
 
 
 
