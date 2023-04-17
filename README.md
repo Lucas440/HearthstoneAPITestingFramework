@@ -16,7 +16,6 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 - IService
 - IHelper
-
 - Single Responsibility
 - Interface Seperation
 
@@ -41,6 +40,9 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 ### Tools
 - HTTPS 
 - Specflow
+- Moq
+- Living Docs
+- GitHub Actions
 
 ### Reporting
 
