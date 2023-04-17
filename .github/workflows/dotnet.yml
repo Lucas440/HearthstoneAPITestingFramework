@@ -8,6 +8,10 @@ on:
   pull_request:
     branches: [ "gleniw-patch-1" ]
 
+defaults:
+  run:
+    working-directory: ./HearthstoneAPIClient
+
 jobs:
   build:
 
