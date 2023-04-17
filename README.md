@@ -34,6 +34,10 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 - Checking the response of requests are correct
 
+### Class Diagram
+
+![Class Diagram]("C:\Users\Glen Smith\source\repos\HearthstoneAPITestingFramework\HearthstoneAPIClient\ClassDiagram1.png")
+
 ### Tools
 - HTTPS 
 - Specflow
@@ -84,9 +88,11 @@ Returns all the cards of a class. Example values: Mage, Paladin.
 
 Our up-to-date GitHub project board [can be found here](https://github.com/users/gleniw/projects/1)
 
+### Metro Retro Board [can be found here](https://metroretro.io/board/LBZC3YCTJGLN)
+
 ### 💭 Definitions of Done and Ready
 
-Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/10)
+Our definition of Done [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/10)
 
 Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/19)
 
