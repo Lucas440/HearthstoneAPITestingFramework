@@ -10,25 +10,6 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
 
-### Concepts Included
-
-#### Services
-
-- IService
-- IHelper
-
-#### Call Manager
-
-- Dependancy Injection
-
-#### Features
-
-- Initialise the service
-
-- Assert that return status, type are correct
-
-- Checking the response of requests are correct
-
 ### Class Diagram
 
 ![Hearthstone drawio](https://user-images.githubusercontent.com/91668478/232553778-31ad4215-e54e-486b-bb48-cc33d327bf02.png)
@@ -47,7 +28,6 @@ When loading the program each item is organized in its respected file
 - Create gherkin scripts for the test cases 
 - Define the steps and Develop the steps from the scripts
 
-
 ### Tools
 - HTTPS 
 - Specflow
@@ -55,9 +35,15 @@ When loading the program each item is organized in its respected file
 - Living Docs
 - GitHub Actions
 
-### Reporting
+###### How to upgrade / create new LivingDoc File
 
-- To run Specflow Report
+1. Confirm CLI is installed by entering the following command in CMD: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
+2. Navigate to folder containing the tests in CMD(\HearthstoneAPITestingFramework\HearthstoneAPIClient\HearthstoneAPITests)
+
+3. Execute the following command: livingdoc feature-folder .\ -t.\bin\debug\net7.0\TestExecution.json --output .\MyReport.html
+
+4. Access the livingdoc file in the tests folder (Step 2.)
 
 ## Project Design & Management
 
@@ -97,17 +83,6 @@ Returns all the cards of a certain race. Example values: Mech, Murloc.
 **Description**
 Returns all the cards of a class. Example values: Mage, Paladin.
 
-#### Living Docs
-
-###### How to upgrade / create new LivingDoc File
-
-1. Confirm CLI is installed by entering the following command in CMD: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
-
-2. Navigate to folder containing the tests in CMD(\HearthstoneAPITestingFramework\HearthstoneAPIClient\HearthstoneAPITests)
-
-3. Execute the following command: livingdoc feature-folder .\ -t.\bin\debug\net7.0\TestExecution.json --output .\MyReport.html
-
-4. Access the livingdoc file in the tests folder (Step 2.)
 
 ### 📝 Project Board
 
@@ -122,5 +97,3 @@ Our Metro Retro Board [can be found here](https://metroretro.io/board/LB05S0ZQXV
 Our definition of Done [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/10)
 
 Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/19)
-
-
