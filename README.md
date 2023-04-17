@@ -28,11 +28,11 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 #### Features
 
-- Initialise the service.
+- Initialise the service
 
-- Assert that return status, type are correct.
+- Assert that return status, type are correct
 
-- Checking the response of requests are correct.
+- Checking the response of requests are correct
 
 ### Tools
 - HTTPS 
