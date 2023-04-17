@@ -79,7 +79,7 @@ namespace HearthstoneAPITests.BDD
 #line 7
 #line hidden
 #line 8
- testRunner.Given("I have initialized CardRaceService", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have initialized CardClassService", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -109,25 +109,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "key",
-                            "Classes"});
-                table1.AddRow(new string[] {
-                            "1",
-                            "Rogue"});
-                table1.AddRow(new string[] {
-                            "2",
-                            "Shaman"});
-                table1.AddRow(new string[] {
-                            "3",
-                            "Warlock"});
 #line 13
- testRunner.When("I search for the Classes <Classes>", ((string)(null)), table1, "When ");
+ testRunner.When("I search for the Classes \"Rogue\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 14
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 19
+#line 15
  testRunner.And("Header status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -145,7 +133,7 @@ this.FeatureBackground();
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid class type status returned object should be a json", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 23
+#line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -158,21 +146,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Classes"});
-                table2.AddRow(new string[] {
-                            "Rogue"});
-                table2.AddRow(new string[] {
-                            "Shaman"});
-                table2.AddRow(new string[] {
-                            "Warlock"});
-#line 24
- testRunner.When("I search for the Classes <Classes>", ((string)(null)), table2, "When ");
+#line 20
+ testRunner.When("I search for the Classes \"Shaman\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 29
+#line 21
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 30
+#line 22
  testRunner.And("Content type should be \"application/json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -190,7 +170,7 @@ this.FeatureBackground();
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid class type connection should be keep alive", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -203,21 +183,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Classes"});
-                table3.AddRow(new string[] {
-                            "Rogue"});
-                table3.AddRow(new string[] {
-                            "Shaman"});
-                table3.AddRow(new string[] {
-                            "Warlock"});
-#line 36
- testRunner.When("I search for the Classes <Classes>", ((string)(null)), table3, "When ");
+#line 28
+ testRunner.When("I search for the Classes \"Warlock\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 29
  testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 42
+#line 30
  testRunner.And("Connection type should be \"keep-alive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -237,7 +209,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid class type status code 404 should be in the response" +
                     " header", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 46
+#line 34
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -250,11 +222,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-#line 47
- testRunner.When("I search for the class \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.When("I search for the Classes \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 48
- testRunner.Then("Header status should be 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 36
+ testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+ testRunner.And("Header status should be 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -271,7 +246,7 @@ this.FeatureBackground();
                     "Sad"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid class type an error message should show", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 53
+#line 42
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -284,11 +259,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-#line 54
- testRunner.When("I search for the class \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 43
+ testRunner.When("I search for the Classes \"Shamon\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 55
- testRunner.Then("JSON should contain a message \"Class not found.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 44
+ testRunner.Then("A JSON of just Classes cards is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 45
+ testRunner.And("JSON should contain a message \"Class not found.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

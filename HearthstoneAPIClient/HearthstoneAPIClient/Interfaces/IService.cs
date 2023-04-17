@@ -8,7 +8,9 @@ namespace HearthstoneAPIClient.Interfaces
         #region Properties
         public CallManager Manager { get; }
 
-        public JArray ResponseContent { get; }
+        public JArray SuccessfulResponseContent { get; }
+
+        public JObject UnSuccessfulResponseContent { get; }
 
         public IResponse ResponseObject { get; }
         #endregion

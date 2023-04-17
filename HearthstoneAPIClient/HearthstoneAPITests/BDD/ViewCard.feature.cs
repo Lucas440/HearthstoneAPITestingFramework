@@ -84,19 +84,19 @@ testRunner.Given("I have initialized CardService", ((string)(null)), ((TechTalk.
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("When searching for a card to view, I should receive status code 200 in the header" +
-            " response")]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type status code 200 should be in the response he" +
+            "ader")]
         [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
         [NUnit.Framework.CategoryAttribute("Happy")]
-        public void WhenSearchingForACardToViewIShouldReceiveStatusCode200InTheHeaderResponse()
+        public void WhenSearchingForAValidRaceTypeStatusCode200ShouldBeInTheResponseHeader()
         {
             string[] tagsOfScenario = new string[] {
                     "ViewCardRequest",
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a card to view, I should receive status code 200 in the header" +
-                    " response", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type status code 200 should be in the response he" +
+                    "ader", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -109,18 +109,123 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "card"});
-                table7.AddRow(new string[] {
-                            "Boulderfist Ogre"});
-                table7.AddRow(new string[] {
-                            "Sir Finley Mrrgglton"});
-                table7.AddRow(new string[] {
-                            "Ysera"});
-#line 14
- testRunner.When("I search for the <card>", ((string)(null)), table7, "When ");
+#line 13
+ testRunner.When("I search for the \"Boulderfist Ogre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 14
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 15
+ testRunner.And("header status is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type status returned object should be a json")]
+        [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
+        [NUnit.Framework.CategoryAttribute("Happy")]
+        public void WhenSearchingForAValidRaceTypeStatusReturnedObjectShouldBeAJson()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ViewCardRequest",
+                    "Happy"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type status returned object should be a json", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 19
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 20
+ testRunner.When("I search for the \"Boulderfist Ogre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 21
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 22
+ testRunner.And("content type is \"application/json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for a valid race type connection should be keep alive")]
+        [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
+        [NUnit.Framework.CategoryAttribute("Happy")]
+        public void WhenSearchingForAValidRaceTypeConnectionShouldBeKeepAlive()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ViewCardRequest",
+                    "Happy"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid race type connection should be keep alive", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 27
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 28
+ testRunner.When("I search for the \"Boulderfist Ogre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 29
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 30
+ testRunner.And("connection type is \"keep-alive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for a card to view, I should receive status code 200 in the header" +
+            " response")]
+        [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
+        [NUnit.Framework.CategoryAttribute("Happy")]
+        public void WhenSearchingForACardToViewIShouldReceiveStatusCode200InTheHeaderResponse()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ViewCardRequest",
+                    "Happy"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a card to view, I should receive status code 200 in the header" +
+                    " response", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 36
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 37
+ testRunner.When("I search for the \"Boulderfist Ogre\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
  testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -138,7 +243,7 @@ this.FeatureBackground();
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a card, I want to view how much mana a minion costs", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
+#line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -151,19 +256,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                            "card"});
-                table8.AddRow(new string[] {
-                            "Boulderfist Ogre"});
-                table8.AddRow(new string[] {
-                            "Sir Finley Mrrgglton"});
-                table8.AddRow(new string[] {
-                            "Ysera"});
-#line 26
- testRunner.When("I search for the <card>", ((string)(null)), table8, "When ");
+#line 45
+ testRunner.When("I search for the \"LOE_076\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
- testRunner.Then("A JSON of the mana cost of a minion should be returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 47
+ testRunner.And("A JSON containing the mana cost of 1 minion should be returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -180,7 +280,7 @@ this.FeatureBackground();
                     "Happy"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a card, I want to know the rarity of the card", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 37
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -193,19 +293,90 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "card"});
-                table9.AddRow(new string[] {
-                            "Boulderfist Ogre"});
-                table9.AddRow(new string[] {
-                            "Sir Finley Mrrgglton"});
-                table9.AddRow(new string[] {
-                            "Ysera"});
-#line 38
- testRunner.When("I search for the <card>", ((string)(null)), table9, "When ");
+#line 54
+ testRunner.When("I search for the card id \"VAN_EX1_572\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
- testRunner.Then("A JSON of the rarity of the card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 56
+ testRunner.And("A JSON of the containing rarity of \"Legendary\" is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for a invalid card type status code 404 should be in the response " +
+            "header")]
+        [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
+        [NUnit.Framework.CategoryAttribute("Sad")]
+        public void WhenSearchingForAInvalidCardTypeStatusCode404ShouldBeInTheResponseHeader()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ViewCardRequest",
+                    "Sad"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid card type status code 404 should be in the response " +
+                    "header", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 60
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 61
+ testRunner.When("I search for the \"Ysero\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 62
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 63
+ testRunner.And("header status is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for a invalid card type an error message should show")]
+        [NUnit.Framework.CategoryAttribute("ViewCardRequest")]
+        [NUnit.Framework.CategoryAttribute("Sad")]
+        public void WhenSearchingForAInvalidCardTypeAnErrorMessageShouldShow()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ViewCardRequest",
+                    "Sad"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a invalid card type an error message should show", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 67
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 68
+ testRunner.When("I search for the \"steve\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 69
+ testRunner.Then("A JSON of the searched card is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 70
+ testRunner.And("JSON should contain a message \"Card not found.\" is Returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

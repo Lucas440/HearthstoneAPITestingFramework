@@ -78,7 +78,7 @@ namespace HearthstoneAPITests.BDD
 #line 7
 #line hidden
 #line 8
-testRunner.Given("I have initialized CardRaceService", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I have initialized CardBackService", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -106,22 +106,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                            "cardbacks"});
-                table10.AddRow(new string[] {
-                            "Celeste"});
-                table10.AddRow(new string[] {
-                            "Firelord"});
-                table10.AddRow(new string[] {
-                            "N\'Zoth"});
 #line 12
- testRunner.When("I search for the cardbacks", ((string)(null)), table10, "When ");
+ testRunner.When("I search for the cardbacks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
- testRunner.Then("A JSON of just cardbacks is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 18
- testRunner.And("Header status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.Then("the Header status should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -130,15 +119,15 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("When searching for a valid cardback type, status returned object should be a json" +
             "")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.CategoryAttribute("CardbackRequest")]
         public void WhenSearchingForAValidCardbackTypeStatusReturnedObjectShouldBeAJson()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest"};
+                    "CardbackRequest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid cardback type, status returned object should be a json" +
                     "", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 21
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -151,22 +140,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "cardbacks"});
-                table11.AddRow(new string[] {
-                            "Celeste"});
-                table11.AddRow(new string[] {
-                            "Firelord"});
-                table11.AddRow(new string[] {
-                            "N\'Zoth"});
-#line 22
- testRunner.When("I search for the cardbacks", ((string)(null)), table11, "When ");
+#line 18
+ testRunner.When("I search for the cardbacks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
- testRunner.Then("A JSON of just cardbacks is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 28
- testRunner.And("Content type should be \"application/json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+ testRunner.Then("The Content type should be \"application/json\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -174,14 +152,14 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("When searching for a valid cardback, connection should be keep alive")]
-        [NUnit.Framework.CategoryAttribute("CardRaceRequest")]
+        [NUnit.Framework.CategoryAttribute("CardbackRequest")]
         public void WhenSearchingForAValidCardbackConnectionShouldBeKeepAlive()
         {
             string[] tagsOfScenario = new string[] {
-                    "CardRaceRequest"};
+                    "CardbackRequest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for a valid cardback, connection should be keep alive", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 31
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -194,22 +172,45 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
-                            "cardbacks"});
-                table12.AddRow(new string[] {
-                            "Celeste"});
-                table12.AddRow(new string[] {
-                            "Firelord"});
-                table12.AddRow(new string[] {
-                            "N\'Zoth"});
+#line 24
+ testRunner.When("I search for the cardbacks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 26
+ testRunner.Then("The Connection type should be \"keep-alive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("When searching for cardbacks incorrectly an error message should show")]
+        [NUnit.Framework.CategoryAttribute("CardbackRequest")]
+        [NUnit.Framework.CategoryAttribute("Sad")]
+        public void WhenSearchingForCardbacksIncorrectlyAnErrorMessageShouldShow()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "CardbackRequest",
+                    "Sad"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When searching for cardbacks incorrectly an error message should show", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 30
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line hidden
+#line 31
+testRunner.When("I search for an inccorect spelling \"cardback\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 32
- testRunner.When("I search for the cardbacks", ((string)(null)), table12, "When ");
-#line hidden
-#line 37
- testRunner.Then("A JSON of just cardbacks is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 38
- testRunner.And("Connection type should be \"keep-alive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("JSON Response should contain a message \"Endpoint \'/cardback\' does not exist\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
