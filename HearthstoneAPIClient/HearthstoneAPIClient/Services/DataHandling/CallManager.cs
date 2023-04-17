@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HearthstoneAPIClient.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace HearthstoneAPIClient.Services.DataHandling
 {
-    public class CallManager
+    public class CallManager : IHelper
     {
-        private readonly HttpClient _client;
+        private readonly HttpClient _client = new HttpClient();
 
         public HttpResponseMessage ResponseMessage { get; private set; }
 
         public bool Successful { get; private set; }
+
+        public CallManager() { }
 
         public CallManager(HttpClient client) 
         {
             _client = client;
         }
 
-        public async Task MakeRequestAsync(string requestString)
+        public virtual async Task MakeRequestAsync(string requestString)
         {
 
             HttpRequestMessage request = new HttpRequestMessage();
@@ -42,6 +45,20 @@ namespace HearthstoneAPIClient.Services.DataHandling
             {
                 Successful = false;
             }
+        }
+
+        public virtual int GetStatusCode()
+        {
+            return (int)ResponseMessage.StatusCode;
+        }
+
+        public virtual string GetContentType()
+        {
+            return ResponseMessage.Content.Headers.ContentType.MediaType;
+        }
+        public virtual string GetConnectionType()
+        {
+            return ResponseMessage.Headers.Connection.ToString();
         }
     }
 }

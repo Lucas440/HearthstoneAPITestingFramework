@@ -60,7 +60,19 @@ Our up-to-date GitHub project board [can be found here](https://github.com/user
 
 ### 💭 Definitions of Done and Ready
 
+### How To Add
 
+When loading the program each item is organized in its respected file
+
+#### Adding a Service
+  - Create a new Service class in the services folder
+  - Ensure the service implements the IHelper and IService interface
+  - Ensure the Service's constructor has a parameter of CallManager
+
+#### Adding new Tests
+- Create a new Specflow feature file to the BDD folder
+- Create gherkin scripts for the test cases 
+- Define the steps and Develop the steps from the scripts
 
 ### 🤺 Contributors
 
