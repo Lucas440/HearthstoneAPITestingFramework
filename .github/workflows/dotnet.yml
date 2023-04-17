@@ -1,25 +1,32 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET 7.0
+name: Build, Run Unit Tests and generate Coverall report
+
 on:
   push:
-
+    branches: [ "gleniw-patch-1" ]
+  pull_request:
+    branches: [ "gleniw-patch-1" ]
+    
+defaults:
+  run:
+    working-directory: ./HearthstoneAPIClient
+    
 jobs:
   build:
-    name: Build & Test
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
-    - uses:  ./
-      with:
-        test-assembly-path: RunSpecflowTests/bin/Release/net7.0
-        test-assembly-dll: RunSpecflowTests.dll
-        output-html: CalculatorResults.html
-        framework: net6.0
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --collect:"XPlat Code Coverage" /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=lcov.info
