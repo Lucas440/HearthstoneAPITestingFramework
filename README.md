@@ -2,6 +2,10 @@
 
 ## API Testing Project on [Hearthstone® API for Developers | RapidAP]((https://rapidapi.com/omgvamp/api/hearthstone)) that utilises HTTPS and Specflow.
 
+### 🤺 Contributors
+
+Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
+
 ### Current Test Status
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
@@ -10,29 +14,49 @@
 
 #### Services
 
-IService
-IHelper
+- IService
+- IHelper
 
-Single Responsibility
-Interface Seperation
+- Single Responsibility
+- Interface Seperation
 
 #### Call Manager
 
-If sucessful into JArray and unsucessful JObject
+- If sucessful into JArray and unsucessful JObject
 
-Dependancy Injection
+- Dependancy Injection
 
 #### Features
 
-Step Definitions
+- Initialise the service.
 
-Initialise the service.
+- Assert that return status, type are correct.
 
-Assert that return status, type are correct.
+- Checking the response of requests are correct.
 
-Checking the response of requests are correct.
+### Tools
+- HTTPS 
+- Specflow
 
-### 🎉️ Epics
+### Reporting
+
+- To run Specflow Report
+
+## Project Design & Management
+
+### Product Goal
+
+* [ ]  Have an automated Test Framework for the Hearthstone API  
+
+### Sprint Goals
+* [ ]  To use project board for Planning, Review and Retrospective
+* [ ]  Ensure artifacts are up to date and consistent with Product Goal
+* [ ]  To have high quality user stories and test cases
+* [ ]  To have very clear Gherkin scenarios derived from user stories to represent the user journeys
+* [ ]  To have a fully functional API test framework
+* [ ]  GitHub Action Workflows
+
+### User Stories
 
 #### Epic 1.0 View Card
 Endpoint
@@ -56,31 +80,14 @@ Returns all the cards of a certain race. Example values: Mech, Murloc.
 **Description**
 Returns all the cards of a class. Example values: Mage, Paladin.
 
-### Product Goal
-
-* [ ]  Have an automated Test Framework for the Hearthstone API  
-
-### Sprint Goals
-* [ ]  To use project board for Planning, Review and Retrospective
-* [ ]  Ensure artifacts are up to date and consistent with Product Goal
-* [ ]  To have high quality user stories and test cases
-* [ ]  To have very clear Gherkin scenarios derived from user stories to represent the user journeys
-* [ ]  To have a fully functional API test framework
-* [ ]  GitHub Action Workflows
-
-
-
-
-
-
 ### 📝 Project Board
 
 Our up-to-date GitHub project board [can be found here](https://github.com/users/gleniw/projects/1)
 
 ### 💭 Definitions of Done and Ready
 
+Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/10)
+
+Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/19)
 
 
-### 🤺 Contributors
-
-Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
