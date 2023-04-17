@@ -5,6 +5,7 @@ using HearthstoneAPITests.Utils;
 using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using Moq;
 
 namespace HearthstoneAPITests.BDD
 {
@@ -59,7 +60,5 @@ namespace HearthstoneAPITests.BDD
         {
             Assert.That(_service.UnSuccessfulResponseContent["message"].ToString(), Is.EqualTo(p0));
         }
-
-
     }
 }

@@ -100,4 +100,17 @@ Our definition of Done [can be found here](https://github.com/gleniw/Hearthstone
 
 Our definition of Ready [can be found here](https://github.com/gleniw/HearthstoneAPITestingFramework/issues/19)
 
+### How To Add
+
+When loading the program each item is organized in its respected file
+
+#### Adding a Service
+  - Create a new Service class in the services folder
+  - Ensure the service implements the IHelper and IService interface
+  - Ensure the Service's constructor has a parameter of CallManager
+
+#### Adding new Tests
+- Create a new Specflow feature file to the BDD folder
+- Create gherkin scripts for the test cases 
+- Define the steps and Develop the steps from the scripts
 
