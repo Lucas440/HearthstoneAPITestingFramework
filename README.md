@@ -10,11 +10,7 @@ Lucas Brennan,  Glen Smith, Suheyb Adam, Kevin Conceicao
 
 [![SpecFlow Tests](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gleniw/HearthstoneAPITestingFramework/actions/workflows/dotnet.yml)
 
-### Class Diagram
-
-![Hearthstone drawio](https://user-images.githubusercontent.com/91668478/232553778-31ad4215-e54e-486b-bb48-cc33d327bf02.png)
-
-### How To Extend
+### How to use
 
 When loading the program each item is organized in its respected file
 
@@ -27,6 +23,12 @@ When loading the program each item is organized in its respected file
 - Create a new Specflow feature file to the BDD folder
 - Create gherkin scripts for the test cases 
 - Define the steps and Develop the steps from the scripts
+
+### Class Diagram
+
+![Hearthstone drawio](https://user-images.githubusercontent.com/91668478/232553778-31ad4215-e54e-486b-bb48-cc33d327bf02.png)
+
+
 
 ### Tools
 - HTTPS 
