@@ -3,6 +3,7 @@ using HearthstoneAPIClient.Services.DataHandling;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace HearthstoneAPIClient.Services
 {
     public class CardService : IService, IHelper
     {
-        public CallManager Manager { get; private set; }
+        public ICallManager Manager { get; private set; }
         public JArray SuccessfulResponseContent { get; private set; }
         public JObject UnSuccessfulResponseContent { get; private set; }
         public IResponse ResponseObject { get; private set; }
@@ -26,13 +27,20 @@ namespace HearthstoneAPIClient.Services
         public async Task MakeRequestAsync(string requestString)
         {
             await Manager.MakeRequestAsync(requestString);
-            if (Manager.Successful)
+            try
             {
-                SuccessfulResponseContent = JArray.Parse(Manager.ResponseMessage.Content.ReadAsStringAsync().Result);
+                if (Manager.Successful)
+                {
+                    SuccessfulResponseContent = JArray.Parse(Manager.ResponseMessage.Content.ReadAsStringAsync().Result);
+                }
+                else
+                {
+                    UnSuccessfulResponseContent = JObject.Parse(Manager.ResponseMessage.Content.ReadAsStringAsync().Result);
+                }
             }
-            else
+            catch (Exception)
             {
-                UnSuccessfulResponseContent = JObject.Parse(Manager.ResponseMessage.Content.ReadAsStringAsync().Result);
+                Debug.WriteLine("Something went wrong with the JSON");
             }
         }
 

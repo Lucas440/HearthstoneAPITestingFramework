@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HearthstoneAPIClient.Services.DataHandling
 {
-    public class CallManager : IHelper
+    public class CallManager : ICallManager ,IHelper
     {
         private readonly HttpClient _client = new HttpClient();
 

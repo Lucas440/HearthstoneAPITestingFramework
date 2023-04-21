@@ -3,19 +3,25 @@ using HearthstoneAPIClient.Services.DataHandling;
 using HearthstoneAPIClient.Services.DataHandling.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace HearthstoneAPIClient.Services
 {
     public class CardClassService : IService, IHelper
     {
-        public CallManager Manager { get; private set; }
+        public ICallManager Manager { get; private set; }
         public JArray SuccessfulResponseContent { get; private set; }
         public JObject UnSuccessfulResponseContent { get; private set; }
         public IResponse ResponseObject { get; private set; }
 
         public string ClassResponse { get; private set; }
 
-        public CardClassService(CallManager manager) 
+        //public CardClassService(CallManager manager) 
+        //{
+        //    Manager = manager;
+        //}
+
+        public CardClassService(ICallManager manager)
         {
             Manager = manager;
         }

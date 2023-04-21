@@ -6,7 +6,7 @@ namespace HearthstoneAPIClient.Interfaces
     public interface IService
     {
         #region Properties
-        public CallManager Manager { get; }
+        public ICallManager Manager { get; }
 
         public JArray SuccessfulResponseContent { get; }
 

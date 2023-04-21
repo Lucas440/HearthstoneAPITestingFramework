@@ -11,7 +11,7 @@ namespace HearthstoneAPIClient.Services
 {
     public class CardRaceService : IService, IHelper
     {
-        public CallManager Manager { get; private set; }
+        public ICallManager Manager { get; private set; }
         public JArray SuccessfulResponseContent { get; private set; }
         public JObject UnSuccessfulResponseContent { get; private set; }
         public IResponse ResponseObject { get; private set; }
