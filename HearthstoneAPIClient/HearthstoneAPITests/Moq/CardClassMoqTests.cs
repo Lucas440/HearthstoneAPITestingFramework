@@ -3,6 +3,7 @@ using HearthstoneAPIClient.Services;
 using Moq;
 using HearthstoneAPIClient.Interfaces;
 using System.Net;
+using System.Net.Http.Headers;
 
 namespace HearthstoneAPITests.Moq
 {
@@ -54,29 +55,41 @@ namespace HearthstoneAPITests.Moq
             _mockManager.Verify(m => m.MakeRequestAsync($"cards/classes/{cardClass}"), Times.Once());
         }
 
-        [Test]
-        public void WhenGetStatusCodeIsCalled_CallManagerReturnsAValue() 
+        [TestCase(200)]
+        [TestCase(400)]
+        public void WhenGetStatusCodeIsCalled_CallManagerReturnsAValue(int expected) 
         {
-            _mockManager.Setup(m => m.GetStatusCode()).Returns(It.IsAny<int>());
-            ((IHelper)_service).GetStatusCode();
+            _mockManager.Setup(m => (m.ResponseMessage)).Returns(new HttpResponseMessage { StatusCode = (HttpStatusCode)expected });
+            int result = ((IHelper)_service).GetStatusCode();
 
-            _mockManager.Verify(m => m.GetStatusCode(), Times.Once());
+            Assert.That(result, Is.EqualTo(expected));
+
+            _mockManager.Verify(m => m.ResponseMessage, Times.Once);
+        }           
+        [TestCase("text/plain")]
+        [TestCase("application/json")]
+        public void WhenGetContentTypeIsCalled_CallManagerReturnsAValue(string expected)
+        {
+            var response = new HttpResponseMessage();
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue(expected);
+            _mockManager.Setup(m => (m.ResponseMessage)).Returns(response);
+            string result = ((IHelper)_service).GetContentType();
+
+            Assert.That(result, Is.EqualTo(expected));
+
+            _mockManager.Verify(m => m.ResponseMessage, Times.Once());
         }
-        [Test]
-        public void WhenGetContentTypeIsCalled_CallManagerReturnsAValue()
+        [TestCase("keep-alive")]
+        public void WhenGetConnectionTypeIsCalled_CallManagerReturnsAValue(string expected)
         {
-            _mockManager.Setup(m => m.GetContentType()).Returns(It.IsAny<string>());
-            ((IHelper)_service).GetContentType();
+            var response = new HttpResponseMessage();
+            response.Headers.Connection.Add(expected);
+            _mockManager.Setup(m => (m.ResponseMessage)).Returns(response);
+            string result = ((IHelper)_service).GetConnectionType();
 
-            _mockManager.Verify(m => m.GetContentType(), Times.Once());
-        }
-        [Test]
-        public void WhenGetConnectionTypeIsCalled_CallManagerReturnsAValue()
-        {
-            _mockManager.Setup(m => m.GetConnectionType()).Returns(It.IsAny<string>());
-            ((IHelper)_service).GetConnectionType();
+            Assert.That(result, Is.EqualTo(expected));
 
-            _mockManager.Verify(m => m.GetConnectionType(), Times.Once());
+            _mockManager.Verify(m => m.ResponseMessage, Times.Once());
         }
     }
 }

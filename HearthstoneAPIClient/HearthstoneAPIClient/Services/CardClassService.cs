@@ -41,16 +41,16 @@ namespace HearthstoneAPIClient.Services
 
         public int GetStatusCode()
         {
-            return Manager.GetStatusCode();
+            return (int)Manager.ResponseMessage.StatusCode;
         }
 
         public string GetContentType()
         {
-            return Manager.GetContentType();
+            return Manager.ResponseMessage.Content.Headers.ContentType.MediaType;
         }
         public string GetConnectionType()
         {
-            return Manager.GetConnectionType();
+            return Manager.ResponseMessage.Headers.Connection.ToString();
         }
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace HearthstoneAPIClient.Services.DataHandling
 {
-    public class CallManager : ICallManager ,IHelper
+    public class CallManager : ICallManager
     {
         private readonly HttpClient _client = new HttpClient();
 
-        public HttpResponseMessage ResponseMessage { get; private set; }
+        public virtual HttpResponseMessage ResponseMessage { get; private set; }
 
         public bool Successful { get; private set; }
 
@@ -45,20 +45,6 @@ namespace HearthstoneAPIClient.Services.DataHandling
             {
                 Successful = false;
             }
-        }
-
-        public virtual int GetStatusCode()
-        {
-            return (int)ResponseMessage.StatusCode;
-        }
-
-        public virtual string GetContentType()
-        {
-            return ResponseMessage.Content.Headers.ContentType.MediaType;
-        }
-        public virtual string GetConnectionType()
-        {
-            return ResponseMessage.Headers.Connection.ToString();
         }
     }
 }

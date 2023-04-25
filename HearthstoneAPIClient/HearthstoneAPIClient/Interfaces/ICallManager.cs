@@ -11,10 +11,5 @@ namespace HearthstoneAPIClient.Interfaces
         public HttpResponseMessage ResponseMessage { get; }
         public bool Successful { get; }
         public Task MakeRequestAsync(string requestString);
-
-        // Not sure about adding these
-        public int GetStatusCode();
-        public string GetContentType();
-        public string GetConnectionType();
     }
 }
